@@ -1,0 +1,57 @@
+{
+    "name": "Get 10% off when buying a products from each CAT A, CAT B, and CAT C when they're purchased together",
+    "redemption_type": "AUTOMATIC",
+    "rules": [
+        {
+            "condition": {
+                "and": [
+                    {
+                        "cart": {
+                            "items": {
+                                "categories": [
+                                    28
+                                ]
+                            },
+                        "minimum_quantity": 1
+                        }
+                    },
+                    {
+                        "cart": {
+                            "items": {
+                                "categories": [
+                                    76
+                                ]
+                            },
+                        "minimum_quantity": 1
+                        }
+                    },
+                    {
+                        "cart": {
+                            "items": {
+                                "categories": [
+                                    30
+                                ]
+                            },
+                        "minimum_quantity": 1
+                        }
+                    }
+                ]
+            },
+            "action": {
+                "cart_items": {
+                    "discount": {
+                        "percentage_amount": 10
+                    },
+                    "include_items_considered_by_condition": true,
+                    "items": {
+                        "categories": [
+                            28,
+                            30,
+                            76
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}
